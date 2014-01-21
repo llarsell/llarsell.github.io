@@ -7,4 +7,4 @@ type: 'DELETE'
 layout: nil
 ---
 
-Eating bread, eating cheese.
+Eating bread, eating cheese, and deleting the act.
