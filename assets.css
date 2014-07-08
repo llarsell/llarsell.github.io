@@ -390,12 +390,15 @@ textarea {
  * Custom Tables.
  */
 
+table {
+width:60%;
+}
+
 table, th, td
 {
 font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
-width:50%;
 border:1px solid black;
-margin:20px;
+margin-bottom: 20px;
 }
 
 td, th 
@@ -411,7 +414,7 @@ font-size:1.1em;
 text-align:left;
 padding-top:2px;
 padding-bottom:4px;
-background-color:#B1BB54;
+background-color:#C9CE6D;
 color:#ffffff;
 }
 
@@ -456,22 +459,22 @@ p,
 ul,
 code {
   margin: 0 0 20px;
-}
+} 
 
 code {
   font-family: 'Monaco', monospace, sans-serif;
-}
+} 
 
 /* SIDEBAR */
 #sidebar {
-  background: #3C8698;
+  background: #3E9288;
   color: #fff;
   float: left;  
   height: 100%;
   overflow: auto;
   position: fixed;
   top: 0;
-  width: 240px;
+  width: 270px;
 }
 
 #sidebar h1 {
@@ -484,8 +487,10 @@ code {
 
 #sidebar h2 {
   color: #111;
-  font-size: 14px;
+  font-size: 12px;
   margin: 0;
+  padding-left: 20px;
+  text-transform: uppercase;
 }
 
 #sidebar ul {
@@ -522,7 +527,7 @@ code {
   -moz-box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.2);
   color: #ddd;
-  margin-bottom: 20px;
+  margin: 20px;
   padding: 5px 10px;
 }
 #sidebar input:active,
@@ -537,7 +542,7 @@ code {
 /* References */
 #content {
   padding: 20px;
-  padding-left: 260px;
+  padding-left: 300px;
   max-width: 900px;
 }
 
@@ -594,30 +599,30 @@ code {
 }
 
 #content article a h2 code {
-  color: #C67E21;
+  color: #7C7C7C;
 }
 
 #content article a h2 code b {
-  background: #C67E21;
+  background: #7C7C7C;
   text-transform: uppercase;
 }
 
 /* GET */
 #content article.GET a h2 code {
-  color: #B1BB54;
+  color: #C9CE6D;
 }
 
 #content article.GET a h2 code b {
-  background: #B1BB54;
+  background: #C9CE6D;
 }
 
 /* POST */
 #content article.POST a h2 code {
-  color: #3C8698;
+  color: #3E9288;
 }
 
 #content article.POST a h2 code b {
-  background: #3C8698;
+  background: #3E9288;
 }
 
 /* PUT */
@@ -638,6 +643,7 @@ code {
   background: #C67E21;
 }
 
+
 /* Reference's body */
 #content h3 {
 }
@@ -649,6 +655,7 @@ code {
 }
 
 #content .body code {
+  display: block;
   border: 1px solid #e2e7ea;
   background: #eef1f2;
   border-radius: 2px;
@@ -659,7 +666,7 @@ code {
 }
 
 #content .body p > code {
-  display: block;
-  padding: 15px;
+  display: inline;
+  padding: 0 1px;
   white-space: pre;
 }

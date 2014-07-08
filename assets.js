@@ -9631,7 +9631,7 @@ function Filter(list) {
     
     // Filter input
     var form = $('<form>').attr({ 'action':'#' });
-    var input = $('<input>').attr({ 'type':'text', 'placeholder':'Filter by keyword' });
+    var input = $('<input>').attr({ 'type':'text', 'placeholder':'Search Doc Topics' });
     $(form).append(input).prependTo(this.el);
     
     // Filter function
