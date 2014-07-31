@@ -15,27 +15,38 @@ Returns a collection of all public traps. Use this endpoint to display content a
 
  * ?size=[Integer]: Specify the number of trap records to return per page.
  * ?orphaned-only=[Boolean]: If true, only traps that haven’t been assigned to a section/category will be returned.
- * ?type=[String]: Use “bundle” to ensure only bundle type traps are returned.
+ * ?category_id=[String]: Only traps belonging to the category with that ID will be returned.
  * ?pretty=[Boolean]: If true, results will be returned formatted.  
  
 **Call**
 
-    curl -L https://example.trap.it/api/v4/{org_slug}/public-traps/?type=bundle&pretty=true -X GET
+    curl -L https://example.trap.it/api/{org_slug}/public-traps/?type=bundle&pretty=true -X GET
 
 **Response:**
 
     {
       "records": [
         {
-          trap representation
+         "active": true, 
+         "categories": [
+           {
+            "id": "[category_id]", 
+            "name": "Science" 
+            }
+          ], 
+         "created": 1403895387.098887, 
+         "featured": false, 
+         "id": "[trap_id]", 
+         "last_updated": null, 
+         "name": "Microsoft", 
+         "public": true, 
+         "type": "bundle", 
+         "url": "https://st1.staging.trap.it/api/{org_slug}/traps/{trap_id}/"
         },
-        {
-          trap representation
-        },  
     ... 
     ...
-     "prev": "https://example.trap.it/api/v4/{org_slug}/public-traps/?before=1378812046.945051&size=12", 
-     "next": "https://example.trap.it/api/v4/{org_slug}/public-traps/?after=1381245869.187704&size=12"
+     "prev": "https://example.trap.it/api/{org_slug}/public-traps/?before=1378812046.945051&size=12", 
+     "next": "https://example.trap.it/api/{org_slug}/public-traps/?after=1381245869.187704&size=12"
     }
 
 
